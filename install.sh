@@ -17,6 +17,9 @@ GROUPID=`id -g $GROUP`
 
 #rm -rf projects
 
+cd src
+docker run -u $USERID:$GROUPID --rm -v $(pwd):/app composer install
+
 #docker-compose up --build -d 
 docker-compose up -d 
 
