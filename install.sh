@@ -23,7 +23,7 @@ docker run -u $USERID:$GROUPID --rm -v $(pwd):/app composer install
 #docker-compose up --build -d 
 docker-compose up -d 
 
-#cp .env.example .env
+cp .env.example .env
 
 docker-compose exec -u $USERID:$GROUPID app php artisan key:generate
 docker-compose exec -u $USERID:$GROUPID app php artisan config:cache
